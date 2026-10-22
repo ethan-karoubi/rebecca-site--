@@ -25,12 +25,9 @@ const VALEURS = [
 
 const FORMATIONS = [
   { y: "2019 – 2023", t: "Diplôme en médecine traditionnelle chinoise" },
-  { y: "
-", t: "Formation en Tuina et massages médicales et de relaxation" },
-  { y: "
-", t: "Spécialisation gynécologie en MTC" },
-  { y: "
-", t: "Formation en nutrition et phytothérapie chinoise" },
+  { y: "", t: "Formation en Tuina et massages médicales et de relaxation" },
+  { y: "", t: "Spécialisation gynécologie en MTC" },
+  { y: "", t: "Formation en nutrition et phytothérapie chinoise" },
 ];
 
 function About() {
