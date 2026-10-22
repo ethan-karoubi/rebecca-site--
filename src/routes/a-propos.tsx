@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { BookOpen, Ear, HeartHandshake, UserRound } from "lucide-react";
+import { BookOpen, Ear, HeartHandshake, Leaf, Sprout, UserRound, UtensilsCrossed } from "lucide-react";
 import { CtaFinal } from "@/components/site/Layout";
 import { PageHero, Reveal, SectionTitle } from "@/components/site/ui";
 import { IMAGES, SITE } from "@/lib/constants";
@@ -28,6 +28,12 @@ const FORMATIONS = [
   { y: "", t: "Formation en Tuina et massages médicales et de relaxation" },
   { y: "", t: "Spécialisation gynécologie en MTC" },
   { y: "", t: "Formation en nutrition et phytothérapie chinoise" },
+];
+
+const ACCOMPAGNEMENT = [
+  { Icon: UtensilsCrossed, t: "Accompagnement alimentaire et nutritionnel", d: "Des repères concrets, adaptés à vos habitudes, à votre terrain et à votre rythme de vie." },
+  { Icon: Leaf, t: "Phytothérapie chinoise", d: "Une formule de plantes choisie pour vous, expliquée et ajustée au fil des semaines." },
+  { Icon: Sprout, t: "Coaching nutritionnel", d: "Un suivi régulier pour ancrer des habitudes simples, réalistes et durables." },
 ];
 
 function About() {
