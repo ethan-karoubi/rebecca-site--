@@ -61,7 +61,7 @@ export const PRESTATIONS = [
   { title: "Tuina (massage thérapeutique chinois)", image: hero, desc: "Un massage énergétique profond qui travaille sur les méridiens pour soulager les tensions et accompagner le corps vers plus de détente.", ideal: "douleurs chroniques, stress, raideurs." },
   { title: "Phytothérapie", image: herbs, desc: "Des formules de plantes issues de la pharmacopée chinoise, choisies selon votre terrain, pour prolonger les bienfaits des séances au quotidien.", ideal: "équilibre hormonal, digestion, vitalité." },
   { title: "Nutrition", image: herbs, desc: "Des conseils alimentaires inspirés de la diététique chinoise, simples et adaptés à vos goûts, pour nourrir votre énergie en profondeur.", ideal: "digestion, glycémie, fatigue." },
-  { title: "Coaching en hygiène de vie", image: portrait, desc: "Sommeil, rythme, mouvement, gestion du stress : nous construisons ensemble des habitudes durables et réalistes.", ideal: "stress, sommeil, envie de changement." },
+  { title: "Coaching nutritionnelle  en hygiène de vie.", image: portrait, desc: "Sommeil, rythme, mouvement, gestion du stress : nous construisons ensemble des habitudes durables et réalistes.\nRéaliation en présentiel et a distance.", ideal: "stress, sommeil, envie de changement." },
   { title: "Drainage lymphatique", image: hero, desc: "Des manœuvres douces et rythmées pour soutenir la circulation lymphatique et favoriser une sensation de légèreté.", ideal: "jambes lourdes, rétention d'eau." },
   { title: "Accompagnement grossesse et post-partum", image: portrait, desc: "Un suivi bienveillant pour soutenir votre bien-être pendant la grossesse puis accompagner la récupération après l'accouchement.", ideal: "nausées, fatigue, récupération post-natale." },
 ];
