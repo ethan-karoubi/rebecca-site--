@@ -24,10 +24,7 @@ const VALEURS = [
 ];
 
 const FORMATIONS = [
-  { y: "[ANNÉE]", t: "Diplôme en médecine traditionnelle chinoise [À COMPLÉTER]" },
-  { y: "[ANNÉE]", t: "Formation en Tuina et techniques manuelles [À COMPLÉTER]" },
-  { y: "[ANNÉE]", t: "Spécialisation gynécologie et obstétrique en MTC [À COMPLÉTER]" },
-  { y: "[ANNÉE]", t: "Formation en nutrition et phytothérapie chinoise [À COMPLÉTER]" },
+  { y: "2019 – 2023", t: "Diplôme en médecine traditionnelle chinoise" },
 ];
 
 function About() {

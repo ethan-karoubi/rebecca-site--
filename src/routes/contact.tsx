@@ -47,7 +47,7 @@ function Contact() {
     reset();
   };
 
-  const Err = ({ m }: { m?: string }) => (m ? <p role="alert" className="mt-1 text-sm text-destructive">{m}</p> : null);
+  const Err = ({ m }: { m?: string | undefined }) => (m ? <p role="alert" className="mt-1 text-sm text-destructive">{m}</p> : null);
 
   return (
     <>
