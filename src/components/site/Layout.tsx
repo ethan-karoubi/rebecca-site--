@@ -3,13 +3,17 @@ import { Facebook, Instagram, Mail, MapPin, Menu, Phone, X } from "lucide-react"
 import { useEffect, useState } from "react";
 import { NAV, SITE, whatsappLink } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import logoAsset from "@/assets/logo-navbar-80.png.asset.json";
 import { btn, LeafMotif, WhatsAppIcon } from "./ui";
 
 function Logo() {
   return (
-    <Link to="/" className="flex flex-col leading-none">
-      <span className="font-serif text-xl text-ink md:text-2xl">{SITE.name}</span>
-      <span className="mt-1 text-[0.65rem] uppercase tracking-[0.2em] text-primary-hover">{SITE.tagline}</span>
+    <Link to="/" className="flex items-center gap-3 leading-none">
+      <img src={logoAsset.url} alt={`${SITE.name} — logo`} width={80} height={80} className="h-12 w-12 shrink-0 rounded-full object-cover ring-1 ring-primary/30 md:h-14 md:w-14" />
+      <span className="flex flex-col">
+        <span className="font-serif text-xl text-ink md:text-2xl">{SITE.name}</span>
+        <span className="mt-1 text-[0.65rem] uppercase tracking-[0.2em] text-primary-hover">{SITE.tagline}</span>
+      </span>
     </Link>
   );
 }
