@@ -56,14 +56,14 @@ export const TEMOIGNAGES = [
 ];
 
 export const PRESTATIONS = [
-  { title: "Acupuncture", image: acupuncture, desc: "Par la pose de fines aiguilles stériles sur des points précis, l'acupuncture vise à rétablir la libre circulation de l'énergie et à soutenir l'équilibre global du corps.", ideal: "troubles du cycle, stress, sommeil, douleurs." },
-  { title: "Ventouses", image: hero, desc: "Posées sur la peau, les ventouses créent une légère aspiration qui favorise la circulation et aide à relâcher les tensions musculaires profondes.", ideal: "tensions dorsales, fatigue, récupération." },
-  { title: "Tuina (massage thérapeutique chinois)", image: hero, desc: "Un massage énergétique profond qui travaille sur les méridiens pour soulager les tensions et accompagner le corps vers plus de détente.", ideal: "douleurs chroniques, stress, raideurs." },
-  { title: "Phytothérapie", image: herbs, desc: "Des formules de plantes issues de la pharmacopée chinoise, choisies selon votre terrain, pour prolonger les bienfaits des séances au quotidien.", ideal: "équilibre hormonal, digestion, vitalité." },
-  { title: "Nutrition", image: herbs, desc: "Des conseils alimentaires inspirés de la diététique chinoise, simples et adaptés à vos goûts, pour nourrir votre énergie en profondeur.", ideal: "digestion, glycémie, fatigue." },
-  { title: "Coaching en hygiène de vie", image: portrait, desc: "Sommeil, rythme, mouvement, gestion du stress : nous construisons ensemble des habitudes durables et réalistes.", ideal: "stress, sommeil, envie de changement." },
-  { title: "Drainage lymphatique", image: hero, desc: "Des manœuvres douces et rythmées pour soutenir la circulation lymphatique et favoriser une sensation de légèreté.", ideal: "jambes lourdes, rétention d'eau." },
-  { title: "Accompagnement grossesse et post-partum", image: portrait, desc: "Un suivi bienveillant pour soutenir votre bien-être pendant la grossesse puis accompagner la récupération après l'accouchement.", ideal: "nausées, fatigue, récupération post-natale." },
+  { title: "Acupuncture", image: acupuncture, desc: "Par la pose de fines aiguilles stériles sur des points précis, l'acupuncture vise à rétablir la libre circulation de l'énergie et à soutenir l'équilibre global du corps.", duration: 'Durée: 6/7', ideal: "troubles du cycle, stress, sommeil, douleurs." },
+  { title: "Ventouses", image: hero, desc: "Posées sur la peau, les ventouses créent une légère aspiration qui favorise la circulation et aide à relâcher les tensions musculaires profondes.", duration: 'Durée : 1 H', ideal: "tensions dorsales, fatigue, récupération." },
+  { title: "Tuina (massage thérapeutique chinois)", image: hero, desc: "Un massage énergétique profond qui travaille sur les méridiens pour soulager les tensions et accompagner le corps vers plus de détente.", duration: 'Durée 20 min', ideal: "douleurs chroniques, stress, raideurs." },
+  { title: "Phytothérapie", image: herbs, desc: "Des formules de plantes issues de la pharmacopée chinoise, choisies selon votre terrain, pour prolonger les bienfaits des séances au quotidien.", duration: 'Durée 1h', ideal: "équilibre hormonal, digestion, vitalité." },
+  { title: "Nutrition", image: herbs, desc: "Des conseils alimentaires inspirés de la diététique chinoise, simples et adaptés à vos goûts, pour nourrir votre énergie en profondeur.", duration: '', ideal: "digestion, glycémie, fatigue." },
+  { title: "Coaching nutritionnelle  en hygiène de vie.", image: portrait, desc: "Sommeil, rythme, mouvement, gestion du stress : nous construisons ensemble des habitudes durables et réalistes.\nRéaliation en présentiel et a distance.", duration: '', ideal: "stress, sommeil, envie de changement." },
+  { title: "Drainage lymphatique", image: hero, desc: "Des manœuvres douces et rythmées pour soutenir la circulation lymphatique et favoriser une sensation de légèreté.", duration: 'Durée 1 H', ideal: "jambes lourdes, rétention d'eau." },
+  { title: "Accompagnement grossesse et post-partum", image: portrait, desc: "Un suivi bienveillant pour soutenir votre bien-être pendant la grossesse puis accompagner la récupération après l'accouchement.", duration: 'Durée : 6/7', ideal: "nausées, fatigue, récupération post-natale." },
 ];
 
 export const FAQ = [

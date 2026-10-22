@@ -36,7 +36,7 @@ function Prestations() {
                   <p className="mt-5 leading-relaxed">{p.desc}</p>
                   <p className="mt-4"><strong className="text-ink">Idéal pour :</strong> {p.ideal}</p>
                   <div className="mt-5 flex flex-wrap gap-6 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-2"><Clock className="h-4 w-4 text-primary-hover" />Durée [À COMPLÉTER]</span>
+                    <span className="flex items-center gap-2"><Clock className="h-4 w-4 text-primary-hover" />{p.duration}</span>
                     <span className="flex items-center gap-2"><Euro className="h-4 w-4 text-primary-hover" />Tarif [À COMPLÉTER]</span>
                   </div>
                   <Link to="/contact" className={btn({ variant: "primary" }) + " mt-7"}>Réserver</Link>
