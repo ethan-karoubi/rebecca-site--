@@ -69,7 +69,8 @@ export function Footer() {
       <LeafMotif className="absolute -bottom-16 -left-10 h-72 w-72 text-primary opacity-10" />
       <div className="container-site relative grid gap-12 md:grid-cols-3">
         <div>
-          <p className="font-serif text-2xl">{SITE.name}</p>
+          <img src={logoAsset.url} alt={`${SITE.name} — logo`} width={80} height={80} className="h-16 w-16 rounded-full object-cover ring-1 ring-primary/30" />
+          <p className="mt-4 font-serif text-2xl">{SITE.name}</p>
           <p className="mt-1 text-xs uppercase tracking-[0.2em] text-primary">{SITE.tagline}</p>
           <p className="mt-6 font-serif text-xl italic text-primary">« {SITE.slogan} »</p>
           <p className="mt-2 text-sm opacity-75">Une approche globale de la santé au féminin.</p>
