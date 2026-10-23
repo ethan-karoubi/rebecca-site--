@@ -1,5 +1,6 @@
 /** Toutes les informations modifiables du site, centralisées ici. */
 import acupuncture from "@/assets/acupuncture.jpg";
+import auriculo from "@/assets/auriculo.jpg.asset.json";
 import drainage from "@/assets/drainage.jpg.asset.json";
 import herbs from "@/assets/herbs.jpg";
 import hero from "@/assets/hero.jpg";
@@ -58,7 +59,14 @@ export const TEMOIGNAGES = [
   { name: "Inès, 29 ans", text: "[TÉMOIGNAGE À REMPLACER] Un accompagnement précieux pendant ma grossesse, tout en douceur." },
 ];
 
-export const PRESTATIONS = [
+export const PRESTATIONS: {
+  title: string;
+  image: string;
+  desc: string;
+  duration: string;
+  ideal: string;
+  price?: string;
+}[] = [
   { title: "Acupuncture", image: acupuncture, desc: "Par la pose de fines aiguilles stériles sur des points précis, l'acupuncture vise à rétablir la libre circulation de l'énergie et à soutenir l'équilibre global du corps.", duration: 'Durée: 6/7', ideal: "troubles du cycle, stress, sommeil, douleurs." },
   { title: "Ventouses", image: ventouses.url, desc: "Posées sur la peau, les ventouses créent une légère aspiration qui favorise la circulation et aide à relâcher les tensions musculaires profondes.", duration: 'Durée : 1 H', ideal: "tensions dorsales, fatigue, récupération." },
   { title: "Tuina (massage thérapeutique chinois)", image: hero, desc: "Un massage énergétique profond qui travaille sur les méridiens pour soulager les tensions et accompagner le corps vers plus de détente.", duration: 'Durée 20 min', ideal: "douleurs chroniques, stress, raideurs." },
@@ -67,6 +75,7 @@ export const PRESTATIONS = [
   { title: "Coaching nutritionnelle  en hygiène de vie.", image: portrait, desc: "Sommeil, rythme, mouvement, gestion du stress : nous construisons ensemble des habitudes durables et réalistes.\nRéaliation en présentiel et a distance.", duration: '', ideal: "stress, sommeil, envie de changement." },
   { title: "Drainage lymphatique", image: drainage.url, desc: "Des manœuvres douces et rythmées pour soutenir la circulation lymphatique et favoriser une sensation de légèreté.", duration: 'Durée 1 H', ideal: "jambes lourdes, rétention d'eau." },
   { title: "Accompagnement grossesse et post-partum", image: portrait, desc: "Un suivi bienveillant pour soutenir votre bien-être pendant la grossesse puis accompagner la récupération après l'accouchement.", duration: 'Durée : 6/7', ideal: "nausées, fatigue, récupération post-natale." },
+  { title: "Auriculothérapie", image: auriculo.url, desc: "Des aiguilles très fines sont posées sur des points précis de l'oreille, réflexes des organes du corps. Ce soin doux apaise le système nerveux et accompagne votre rééquilibrage. Je pratique aussi le protocole Nada, un protocole de cinq points utilisé pour le stress et les addictions.", duration: "Durée 1h", ideal: "stress, perte de poids, protocole Nada.", price: "NA" },
 ];
 
 export const FAQ = [
