@@ -1,9 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Building2, Clock, Euro, Laptop } from "lucide-react";
 import { CtaFinal } from "@/components/site/Layout";
 import { btn, PageHero, Reveal, SectionTitle } from "@/components/site/ui";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { FAQ, PRESTATIONS, SITE, SPECIALITES } from "@/lib/constants";
+import { FAQ, PRESTATIONS, reservationLink, SITE, SPECIALITES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/prestations")({
@@ -39,7 +39,7 @@ function Prestations() {
                     {p.duration ? <span className="flex items-center gap-2"><Clock className="h-4 w-4 text-primary-hover" />{p.duration}</span> : null}
                     <span className="flex items-center gap-2"><Euro className="h-4 w-4 text-primary-hover" />Tarif {p.price ?? "[À COMPLÉTER]"}</span>
                   </div>
-                  <Link to="/contact" className={btn({ variant: "primary" }) + " mt-7"}>Réserver</Link>
+                  <a href={reservationLink(p.title)} target="_blank" rel="noopener noreferrer" className={btn({ variant: "primary" }) + " mt-7"}>Réserver</a>
                 </div>
               </article>
             </Reveal>
