@@ -12,9 +12,9 @@ export const SITE = {
   name: "[NOM DE LA PRATICIENNE]",
   tagline: "Médecine chinoise · Santé au féminin",
   slogan: "Du symptôme à la cause",
-  phone: "[TÉLÉPHONE À COMPLÉTER]",
-  phoneHref: "tel:+33600000000",
-  whatsapp: "33600000000", // format international sans + ni espaces
+  phone: "058 779 12 97",
+  phoneHref: "tel:+972587791297",
+  whatsapp: "972587791297", // format international sans + ni espaces
   email: "contact@exemple.fr",
   address: "[ADRESSE DU CABINET À COMPLÉTER]",
   hours: ["Lundi – Vendredi : 9h – 19h [À COMPLÉTER]", "Samedi : 9h – 13h [À COMPLÉTER]"],
@@ -25,6 +25,10 @@ export const SITE = {
 
 export const whatsappLink = (text = "Bonjour, je souhaite prendre rendez-vous") =>
   `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(text)}`;
+
+/** Lien WhatsApp pré-rempli pour la réservation d'une prestation précise. */
+export const reservationLink = (title: string) =>
+  whatsappLink(`Bonjour, j'aurais aimé plus d'informations /reserver ${title}`);
 
 export const NAV = [
   { to: "/", label: "Accueil" },
