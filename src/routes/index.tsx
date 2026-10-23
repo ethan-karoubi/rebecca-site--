@@ -3,7 +3,7 @@ import * as Icons from "lucide-react";
 import { Building2, Laptop, Quote, Sparkles } from "lucide-react";
 import { CtaFinal } from "@/components/site/Layout";
 import { btn, LeafMotif, Reveal, SectionTitle } from "@/components/site/ui";
-import { IMAGES, METHODE, OUTILS, SITE, SPECIALITES, TEMOIGNAGES } from "@/lib/constants";
+import { IMAGES, METHODE, OUTILS, SITE, SPECIALITES, TEMOIGNAGES, whatsappLink } from "@/lib/constants";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,7 +31,7 @@ function Index() {
             <p className="mt-5 font-serif text-2xl text-ink md:text-3xl">Une approche globale de la santé au féminin</p>
             <p className="mt-6 max-w-xl leading-relaxed">J'accompagne les femmes grâce à la médecine chinoise et à une approche personnalisée associant acupuncture, ventouses, Tuina, phytothérapie, nutrition et coaching en hygiène de vie.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link to="/contact" className={btn({ variant: "primary" })}>Prendre rendez-vous</Link>
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className={btn({ variant: "primary" })}>Prendre rendez-vous</a>
               <Link to="/prestations" className={btn({ variant: "secondary" })}>Découvrir mes prestations</Link>
             </div>
           </div>
