@@ -1,5 +1,6 @@
 /** Toutes les informations modifiables du site, centralisées ici. */
 import acupuncture from "@/assets/acupuncture.jpg";
+import drainage from "@/assets/drainage.jpg.asset.json";
 import herbs from "@/assets/herbs.jpg";
 import hero from "@/assets/hero.jpg";
 import portrait from "@/assets/portrait.jpg";
@@ -63,7 +64,7 @@ export const PRESTATIONS = [
   { title: "Phytothérapie", image: herbs, desc: "Des formules de plantes issues de la pharmacopée chinoise, choisies selon votre terrain, pour prolonger les bienfaits des séances au quotidien.", duration: 'Durée 1h', ideal: "équilibre hormonal, digestion, vitalité." },
   { title: "Nutrition", image: herbs, desc: "Des conseils alimentaires inspirés de la diététique chinoise, simples et adaptés à vos goûts, pour nourrir votre énergie en profondeur.", duration: '', ideal: "digestion, glycémie, fatigue." },
   { title: "Coaching nutritionnelle  en hygiène de vie.", image: portrait, desc: "Sommeil, rythme, mouvement, gestion du stress : nous construisons ensemble des habitudes durables et réalistes.\nRéaliation en présentiel et a distance.", duration: '', ideal: "stress, sommeil, envie de changement." },
-  { title: "Drainage lymphatique", image: hero, desc: "Des manœuvres douces et rythmées pour soutenir la circulation lymphatique et favoriser une sensation de légèreté.", duration: 'Durée 1 H', ideal: "jambes lourdes, rétention d'eau." },
+  { title: "Drainage lymphatique", image: drainage.url, desc: "Des manœuvres douces et rythmées pour soutenir la circulation lymphatique et favoriser une sensation de légèreté.", duration: 'Durée 1 H', ideal: "jambes lourdes, rétention d'eau." },
   { title: "Accompagnement grossesse et post-partum", image: portrait, desc: "Un suivi bienveillant pour soutenir votre bien-être pendant la grossesse puis accompagner la récupération après l'accouchement.", duration: 'Durée : 6/7', ideal: "nausées, fatigue, récupération post-natale." },
 ];
 
