@@ -44,7 +44,7 @@ export function Header() {
           {NAV.map((n) => (
             <Link key={n.to} to={n.to} className={navLink} activeOptions={{ exact: true }}>{n.label}</Link>
           ))}
-          <Link to="/contact" className={btn({ variant: "primary" })}>Prendre rendez-vous</Link>
+          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className={btn({ variant: "primary" })}>Prendre rendez-vous</a>
         </nav>
         <button className="flex h-11 w-11 items-center justify-center text-ink lg:hidden" aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)}>
           {open ? <X /> : <Menu />}
@@ -56,7 +56,7 @@ export function Header() {
           {NAV.map((n) => (
             <Link key={n.to} to={n.to} onClick={() => setOpen(false)} activeOptions={{ exact: true }} className="border-b py-4 font-serif text-2xl text-ink data-[status=active]:text-primary-hover">{n.label}</Link>
           ))}
-          <Link to="/contact" onClick={() => setOpen(false)} className={cn(btn({ variant: "primary" }), "mt-6")}>Prendre rendez-vous</Link>
+          <a href={whatsappLink()} onClick={() => setOpen(false)} target="_blank" rel="noopener noreferrer" className={cn(btn({ variant: "primary" }), "mt-6")}>Prendre rendez-vous</a>
         </nav>
       </div>
     </header>
@@ -119,8 +119,8 @@ export function CtaFinal() {
         <h2 className="display-lg mt-4 !text-ink-foreground">Prête à prendre soin de vous ?</h2>
         <p className="mx-auto mt-4 max-w-lg opacity-75">Je vous accompagne avec écoute et douceur, à votre rythme.</p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Link to="/contact" className={btn({ variant: "primary" })}>Prendre rendez-vous</Link>
-          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className={btn({ variant: "light" })}><WhatsAppIcon className="h-4 w-4" /> Écrire sur WhatsApp</a>
+          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className={btn({ variant: "primary" })}>Prendre rendez-vous</a>
+          <Link to="/contact" className={btn({ variant: "light" })}>Formulaire de contact</Link>
         </div>
       </div>
     </section>
