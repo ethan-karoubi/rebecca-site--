@@ -1,7 +1,7 @@
 /** Toutes les informations modifiables du site, centralisées ici. */
 import acupuncture from "@/assets/acupuncture.jpg";
-import auriculo from "@/assets/auriculo.jpg.asset.json";
-import drainage from "@/assets/drainage.jpg.asset.json";
+import auriculo from "@/assets/auriculo.jpg";
+import drainage from "@/assets/drainage.jpg";
 import herbs from "@/assets/herbs.jpg";
 import hero from "@/assets/hero.jpg";
 import phytotherapie from "@/assets/phytotherapie.jpg.asset.json";
@@ -77,9 +77,9 @@ export const PRESTATIONS: {
   { title: "Phytothérapie", image: phytotherapie.url, desc: "Des formules de plantes issues de la pharmacopée chinoise, choisies selon votre terrain, pour prolonger les bienfaits des séances au quotidien.", duration: 'Durée 1h', ideal: "équilibre hormonal, digestion, vitalité." },
   { title: "Nutrition", image: herbs, desc: "Des conseils alimentaires inspirés de la diététique chinoise, simples et adaptés à vos goûts, pour nourrir votre énergie en profondeur.", duration: '', ideal: "digestion, glycémie, fatigue." },
   { title: "Coaching nutritionnelle  en hygiène de vie.", image: portrait, desc: "Sommeil, rythme, mouvement, gestion du stress : nous construisons ensemble des habitudes durables et réalistes.\nRéaliation en présentiel et a distance.", duration: '', ideal: "stress, sommeil, envie de changement." },
-  { title: "Drainage lymphatique", image: drainage.url, desc: "Des manœuvres douces et rythmées pour soutenir la circulation lymphatique et favoriser une sensation de légèreté.", duration: 'Durée 1 H', ideal: "jambes lourdes, rétention d'eau." },
+  { title: "Drainage lymphatique", image: drainage, desc: "Des manœuvres douces et rythmées pour soutenir la circulation lymphatique et favoriser une sensation de légèreté.", duration: 'Durée 1 H', ideal: "jambes lourdes, rétention d'eau." },
   { title: "Accompagnement grossesse et post-partum", image: portrait, desc: "Un suivi bienveillant pour soutenir votre bien-être pendant la grossesse puis accompagner la récupération après l'accouchement.", duration: 'Durée : 6/7', ideal: "nausées, fatigue, récupération post-natale." },
-  { title: "Auriculothérapie", image: auriculo.url, desc: "Des aiguilles très fines sont posées sur des points précis de l'oreille, réflexes des organes du corps. Ce soin doux apaise le système nerveux et accompagne votre rééquilibrage. Je pratique aussi le protocole Nada, un protocole de cinq points utilisé pour le stress et les addictions.", duration: "Durée 1h", ideal: "stress, perte de poids, protocole Nada.", price: "NA" },
+  { title: "Auriculothérapie", image: auriculo, desc: "Des aiguilles très fines sont posées sur des points précis de l'oreille, réflexes des organes du corps. Ce soin doux apaise le système nerveux et accompagne votre rééquilibrage. Je pratique aussi le protocole Nada, un protocole de cinq points utilisé pour le stress et les addictions.", duration: "Durée 1h", ideal: "stress, perte de poids, protocole Nada.", price: "NA" },
 ];
 
 export const FAQ = [

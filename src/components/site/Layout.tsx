@@ -89,7 +89,7 @@ export function Footer() {
           <a href={`mailto:${SITE.email}`} className="flex gap-3 opacity-85 hover:text-primary"><Mail className="h-4 w-4 text-primary" />{SITE.email}</a>
           {SITE.hours.map((h) => <p key={h} className="opacity-70">{h}</p>)}
           <div className="flex gap-3 pt-2">
-            <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/40 text-primary hover:bg-primary hover:text-ink"><Instagram className="h-4 w-4" /></a>
+            <a href="https://www.instagram.com/rebecca_guedjmtc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/40 text-primary hover:bg-primary hover:text-ink"><Instagram className="h-4 w-4" /></a>
             <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/40 text-primary hover:bg-primary hover:text-ink"><Facebook className="h-4 w-4" /></a>
           </div>
         </div>
