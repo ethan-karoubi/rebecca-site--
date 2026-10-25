@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/contact")({
     ],
     scripts: [{
       type: "application/ld+json",
-      children: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", name: SITE.name, telephone: SITE.phone, email: SITE.email, address: SITE.address, slogan: SITE.slogan }),
+      children: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", name: SITE.name, telephone: SITE.phone, address: SITE.address, slogan: SITE.slogan }),
     }],
   }),
   component: Contact,
@@ -25,7 +25,6 @@ export const Route = createFileRoute("/contact")({
 
 const schema = z.object({
   name: z.string().trim().min(2, "Merci d'indiquer votre nom et prénom.").max(100),
-  email: z.string().trim().email("Adresse email invalide.").max(255),
   phone: z.string().trim().max(30).optional(),
   motif: z.string().min(1, "Merci de choisir un motif."),
   message: z.string().trim().min(10, "Votre message doit contenir au moins 10 caractères.").max(2000),
@@ -41,8 +40,9 @@ function Contact() {
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<Form>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (d: Form) => {
-    const body = `Nom : ${d.name}\nEmail : ${d.email}\nTéléphone : ${d.phone ?? ""}\nMotif : ${d.motif}\n\n${d.message}`;
-    window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent("Demande de rendez-vous – " + d.motif)}&body=${encodeURIComponent(body)}`;
+    const text = `Bonjour, je souhaite prendre rendez-vous.\n\nNom : ${d.name}${d.phone ? `\nTéléphone : ${d.phone}` : ""}\nMotif : ${d.motif}\n\n${d.message}`;
+    const url = whatsappLink(text);
+    if (!window.open(url, "_blank", "noopener,noreferrer")) window.location.href = url;
     setSent(true);
     reset();
   };
@@ -59,7 +59,6 @@ function Contact() {
             <input type="text" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden {...register("website")} />
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="block text-sm font-semibold text-ink">Nom et prénom *<input className={field} {...register("name")} /><Err m={errors.name?.message} /></label>
-              <label className="block text-sm font-semibold text-ink">Email *<input type="email" className={field} {...register("email")} /><Err m={errors.email?.message} /></label>
               <label className="block text-sm font-semibold text-ink">Téléphone<input type="tel" className={field} {...register("phone")} /></label>
               <label className="block text-sm font-semibold text-ink">Motif *
                 <select className={field} defaultValue="" {...register("motif")}>
@@ -74,8 +73,8 @@ function Contact() {
               <span>J'accepte que mes données soient utilisées pour être recontactée. Elles ne seront jamais transmises à des tiers.</span>
             </label>
             <Err m={errors.consent?.message} />
-            <button type="submit" disabled={isSubmitting} className={btn({ variant: "primary" })}>{isSubmitting ? "Envoi…" : "Envoyer"}</button>
-            {sent && <p role="status" className="rounded-xl bg-secondary p-4 text-sm text-ink">Merci ! Votre messagerie s'est ouverte pour finaliser l'envoi. Je vous réponds rapidement.</p>}
+            <button type="submit" disabled={isSubmitting} className={btn({ variant: "primary" })}>{isSubmitting ? "Ouverture de WhatsApp…" : "Envoyer sur WhatsApp"}</button>
+            {sent && <p role="status" className="rounded-xl bg-secondary p-4 text-sm text-ink">Merci ! WhatsApp s'est ouvert avec votre message : il suffit de l'envoyer. Je vous réponds rapidement.</p>}
           </form>
 
           <aside className="space-y-6 lg:col-span-2">
@@ -83,7 +82,6 @@ function Contact() {
             <ul className="space-y-4">
               <li className="flex gap-3"><MapPin className="h-5 w-5 shrink-0 text-primary-hover" />{SITE.address}</li>
               <li><a href={SITE.phoneHref} className="flex gap-3 hover:text-primary-hover"><Phone className="h-5 w-5 text-primary-hover" />{SITE.phone}</a></li>
-              <li><a href={`mailto:${SITE.email}`} className="flex gap-3 hover:text-primary-hover"><Mail className="h-5 w-5 text-primary-hover" />{SITE.email}</a></li>
               <li className="flex gap-3"><Clock className="h-5 w-5 shrink-0 text-primary-hover" /><span>{SITE.hours.map((h) => <span key={h} className="block">{h}</span>)}</span></li>
             </ul>
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className={btn({ variant: "whatsapp" }) + " w-full py-4 text-base"}><WhatsAppIcon className="h-5 w-5" /> Écrire sur WhatsApp</a>

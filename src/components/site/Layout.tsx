@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Mail, MapPin, Menu, Phone, X } from "lucide-react";
+import { Facebook, Instagram, MapPin, Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NAV, SITE, whatsappLink } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -84,12 +84,12 @@ export function Footer() {
             <li><Link to="/mentions-legales" className="opacity-80 transition hover:text-primary hover:opacity-100">Mentions légales</Link></li>
           </ul>
         </div>
-        <div className="space-y-3 text-sm">
+        <div className="space-y-4 text-base md:text-lg">
           <p className="eyebrow !text-primary">Coordonnées</p>
-          <p className="mt-5 flex gap-3 opacity-85"><MapPin className="h-4 w-4 shrink-0 text-primary" />{SITE.address}</p>
-          <a href={SITE.phoneHref} className="flex gap-3 opacity-85 hover:text-primary"><Phone className="h-4 w-4 text-primary" />{SITE.phone}</a>
-          <a href={`mailto:${SITE.email}`} className="flex gap-3 opacity-85 hover:text-primary"><Mail className="h-4 w-4 text-primary" />{SITE.email}</a>
-          {SITE.hours.map((h) => <p key={h} className="opacity-70">{h}</p>)}
+          <p className="mt-5 flex gap-3 opacity-90"><MapPin className="mt-1 h-5 w-5 shrink-0 text-primary" />{SITE.address}</p>
+          <a href={SITE.phoneHref} className="flex gap-3 opacity-90 hover:text-primary"><Phone className="mt-1 h-5 w-5 shrink-0 text-primary" />{SITE.phone}</a>
+          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="flex gap-3 opacity-90 hover:text-primary"><WhatsAppIcon className="mt-1 h-5 w-5 shrink-0 text-primary" />Contacter via WhatsApp</a>
+          {SITE.hours.map((h) => <p key={h} className="opacity-80">{h}</p>)}
           <div className="flex gap-3 pt-2">
             <a href="https://www.instagram.com/rebecca_guedjmtc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/40 text-primary hover:bg-primary hover:text-ink"><Instagram className="h-4 w-4" /></a>
             <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/40 text-primary hover:bg-primary hover:text-ink"><Facebook className="h-4 w-4" /></a>
