@@ -3,13 +3,13 @@ import { Facebook, Instagram, Mail, MapPin, Menu, Phone, X } from "lucide-react"
 import { useEffect, useState } from "react";
 import { NAV, SITE, whatsappLink } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/logo-navbar-80.png.asset.json";
+import logoImg from "@/assets/logo.png";
 import { btn, LeafMotif, WhatsAppIcon } from "./ui";
 
 function Logo() {
   return (
     <Link to="/" className="flex items-center gap-3 leading-none">
-      <img src={logoAsset.url} alt={`${SITE.name} — logo`} width={80} height={80} className="h-12 w-12 shrink-0 rounded-full object-cover ring-1 ring-primary/30 md:h-14 md:w-14" />
+      <img src={logoImg} alt={`${SITE.name} — logo`} width={300} height={299} className="h-14 w-14 shrink-0 object-contain md:h-16 md:w-16" />
       <span className="flex flex-col">
         <span className="font-serif text-xl text-ink md:text-2xl">{SITE.name}</span>
         <span className="mt-1 text-[0.65rem] uppercase tracking-[0.2em] text-primary-hover">{SITE.tagline}</span>
@@ -71,7 +71,7 @@ export function Footer() {
       <LeafMotif className="absolute -bottom-16 -left-10 h-72 w-72 text-primary opacity-10" />
       <div className="container-site relative grid gap-12 md:grid-cols-3">
         <div>
-          <img src={logoAsset.url} alt={`${SITE.name} — logo`} width={80} height={80} className="h-16 w-16 rounded-full bg-white object-cover ring-1 ring-primary/30" />
+          <img src={logoImg} alt={`${SITE.name} — logo`} width={300} height={299} className="h-20 w-20 rounded-full bg-white object-contain" />
           <p className="mt-4 font-serif text-2xl">{SITE.name}</p>
           <p className="mt-1 text-xs uppercase tracking-[0.2em] text-primary">{SITE.tagline}</p>
           <p className="mt-6 font-serif text-xl italic text-primary">« {SITE.slogan} »</p>
