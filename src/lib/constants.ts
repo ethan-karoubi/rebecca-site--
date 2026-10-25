@@ -4,7 +4,7 @@ import auriculo from "@/assets/auriculo.jpg";
 import drainage from "@/assets/drainage.jpg";
 import herbs from "@/assets/herbs.jpg";
 import hero from "@/assets/hero.jpg";
-import phytotherapie from "@/assets/phytotherapie.jpg.asset.json";
+import phytotherapie from "@/assets/phytotherapie.jpg";
 import portrait from "@/assets/portrait.jpg";
 import ventouses from "@/assets/ventouses.jpg";
 
@@ -74,7 +74,7 @@ export const PRESTATIONS: {
   { title: "Acupuncture", image: acupuncture, desc: "Par la pose de fines aiguilles stériles sur des points précis, l'acupuncture vise à rétablir la libre circulation de l'énergie et à soutenir l'équilibre global du corps.", duration: 'Durée: 6/7', ideal: "troubles du cycle, stress, sommeil, douleurs." },
   { title: "Ventouses", image: ventouses, desc: "Posées sur la peau, les ventouses créent une légère aspiration qui favorise la circulation et aide à relâcher les tensions musculaires profondes.", duration: 'Durée : 1 H', ideal: "tensions dorsales, fatigue, récupération." },
   { title: "Tuina (massage thérapeutique chinois)", image: hero, desc: "Un massage énergétique profond qui travaille sur les méridiens pour soulager les tensions et accompagner le corps vers plus de détente.", duration: 'Durée 20 min', ideal: "douleurs chroniques, stress, raideurs." },
-  { title: "Phytothérapie", image: phytotherapie.url, desc: "Des formules de plantes issues de la pharmacopée chinoise, choisies selon votre terrain, pour prolonger les bienfaits des séances au quotidien.", duration: 'Durée 1h', ideal: "équilibre hormonal, digestion, vitalité." },
+  { title: "Phytothérapie", image: phytotherapie, desc: "Des formules de plantes issues de la pharmacopée chinoise, choisies selon votre terrain, pour prolonger les bienfaits des séances au quotidien.", duration: 'Durée 1h', ideal: "équilibre hormonal, digestion, vitalité." },
   { title: "Nutrition", image: herbs, desc: "Des conseils alimentaires inspirés de la diététique chinoise, simples et adaptés à vos goûts, pour nourrir votre énergie en profondeur.", duration: '', ideal: "digestion, glycémie, fatigue." },
   { title: "Coaching nutritionnelle  en hygiène de vie.", image: portrait, desc: "Sommeil, rythme, mouvement, gestion du stress : nous construisons ensemble des habitudes durables et réalistes.\nRéaliation en présentiel et a distance.", duration: '', ideal: "stress, sommeil, envie de changement." },
   { title: "Drainage lymphatique", image: drainage, desc: "Des manœuvres douces et rythmées pour soutenir la circulation lymphatique et favoriser une sensation de légèreté.", duration: 'Durée 1 H', ideal: "jambes lourdes, rétention d'eau." },
