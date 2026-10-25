@@ -37,7 +37,8 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className={cn("sticky top-0 z-50 transition-all duration-300", scrolled ? "bg-background/85 shadow-soft backdrop-blur-md" : "bg-background")}>
+    <>
+    <header className={cn("sticky top-0 z-50 transition-all duration-300", scrolled && !open ? "bg-background/85 shadow-soft backdrop-blur-md" : "bg-background")}>
       <div className="container-site flex h-20 items-center justify-between gap-4">
         <Logo />
         <nav aria-label="Navigation principale" className="hidden items-center gap-8 lg:flex">
@@ -50,16 +51,17 @@ export function Header() {
           {open ? <X /> : <Menu />}
         </button>
       </div>
-      <div id="mobile-menu" className={cn("fixed inset-0 top-20 z-40 lg:hidden transition-opacity duration-300", open ? "opacity-100" : "pointer-events-none opacity-0")} onClick={() => setOpen(false)}>
+    </header>
+      <div id="mobile-menu" className={cn("fixed inset-0 top-20 z-[60] lg:hidden transition-opacity duration-300", open ? "opacity-100" : "pointer-events-none opacity-0")} onClick={() => setOpen(false)}>
         <div className="absolute inset-0 bg-ink/30" />
-        <nav aria-label="Navigation mobile" className={cn("relative ml-auto flex h-full w-full max-w-sm flex-col gap-2 bg-background p-8 transition-transform duration-300", open ? "translate-x-0" : "translate-x-full")} onClick={(e) => e.stopPropagation()}>
+        <nav aria-label="Navigation mobile" className={cn("relative ml-auto flex h-full w-full max-w-sm flex-col gap-2 overflow-y-auto bg-white p-8 shadow-2xl transition-transform duration-300", open ? "translate-x-0" : "translate-x-full")} onClick={(e) => e.stopPropagation()}>
           {NAV.map((n) => (
             <Link key={n.to} to={n.to} onClick={() => setOpen(false)} activeOptions={{ exact: true }} className="border-b py-4 font-serif text-2xl text-ink data-[status=active]:text-primary-hover">{n.label}</Link>
           ))}
           <a href={whatsappLink()} onClick={() => setOpen(false)} target="_blank" rel="noopener noreferrer" className={cn(btn({ variant: "primary" }), "mt-6")}>Prendre rendez-vous</a>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
 
@@ -69,7 +71,7 @@ export function Footer() {
       <LeafMotif className="absolute -bottom-16 -left-10 h-72 w-72 text-primary opacity-10" />
       <div className="container-site relative grid gap-12 md:grid-cols-3">
         <div>
-          <img src={logoAsset.url} alt={`${SITE.name} — logo`} width={80} height={80} className="h-16 w-16 rounded-full object-cover ring-1 ring-primary/30" />
+          <img src={logoAsset.url} alt={`${SITE.name} — logo`} width={80} height={80} className="h-16 w-16 rounded-full bg-white object-cover ring-1 ring-primary/30" />
           <p className="mt-4 font-serif text-2xl">{SITE.name}</p>
           <p className="mt-1 text-xs uppercase tracking-[0.2em] text-primary">{SITE.tagline}</p>
           <p className="mt-6 font-serif text-xl italic text-primary">« {SITE.slogan} »</p>
