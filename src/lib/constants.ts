@@ -9,7 +9,7 @@ import portrait from "@/assets/portrait.jpg";
 import ventouses from "@/assets/ventouses.jpg";
 
 export const SITE = {
-  name: "[NOM DE LA PRATICIENNE]",
+  name: "Rebecca Guedj",
   tagline: "Médecine chinoise · Santé au féminin",
   slogan: "Du symptôme à la cause",
   phone: "058 779 12 97",
